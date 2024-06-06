@@ -15,7 +15,6 @@
     "framer-motion": "^11.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-lottie": "^1.2.4",
     "react-router-dom": "^5.3.4",
     "react-scripts": "^5.0.1",
     "react-scrollable-feed": "^2.0.2",
@@ -48,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7"
   }
 }

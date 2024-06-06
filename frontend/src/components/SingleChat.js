@@ -11,7 +11,7 @@ import axios from "axios";
 import ScrollableChat from "./ScrollableChat";
 import "./style.css"
 import io from "socket.io-client"
-import Lottie from "react-lottie"
+
 import animationData from "../animation/Animation - 1717474803145.json"
 
 
@@ -30,15 +30,6 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
     ChatState();
     
     const toast = useToast();
-
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice",
-        },
-      };
 
     const fetchMessages = async () =>{
         if(!selectedChat) return;
@@ -213,11 +204,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
                     </div>
                 )}
                 <FormControl onKeyDown={sendMessage} isRequired mt={3}>
-                    {istyping?<div><Lottie
-                    options={defaultOptions}
-                    width={70}
-                    style={{marginBottom: 15, marginLeft: 0}}
-                    /></div>:<></>}
+                    {istyping?<div>Loading.......</div>:<></>}
                     <Input
                     variant={"filled"}
                     bg={"#E0E0E0"}
