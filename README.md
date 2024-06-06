@@ -6,8 +6,10 @@ This is the new repository for our Chat project. We faced some issues while depl
 
 ///-----------------------------------------------------Bugs------------------------------------------------///
 1. When login with an account the chat page will not load immediately you have to reload the page manually to render the chat rooms
-2. If you logout and login with a new account the The page will not show the username you logged in with, but the previous user. To fix this issue you need to refresh the page manually.
-3. 
+   ![image](https://github.com/Wenkangy/chat-app/assets/166893688/4b41a1b5-7b8b-4bb4-bac3-2527c63a7723)
+
+3. If you logout and login with a new account the The page will not show the username you logged in with, but the previous user. To fix this issue you need to refresh the page manually.
+4. 
 
 
 
