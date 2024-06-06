@@ -5,8 +5,8 @@ This is the new repository for our Chat project. We faced some issues while depl
 
 
 ///-----------------------------------------------------Bugs------------------------------------------------///
-1. when login with an account the chat page will not load immediately you have to reload the page manually to render the chat rooms
-2. if you logout and login with a new account the The page will not show the username you logged in with, but the previous user. To fix this issue you need to refresh the page manually.
+1. When login with an account the chat page will not load immediately you have to reload the page manually to render the chat rooms
+2. If you logout and login with a new account the The page will not show the username you logged in with, but the previous user. To fix this issue you need to refresh the page manually.
 3. 
 
 
