@@ -1,5 +1,6 @@
 
 ///-----------------------------------------------------Notes------------------------------------------------///
+
 This is the new repository for our Chat project. We faced some issues while deploying our application to render, where rendering did not allow deploying the first application inside a folder. The folder was api in the first reposi
 
 
