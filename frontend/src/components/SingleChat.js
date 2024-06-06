@@ -12,7 +12,6 @@ import ScrollableChat from "./ScrollableChat";
 import "./style.css"
 import io from "socket.io-client"
 
-import animationData from "../animation/Animation - 1717474803145.json"
 
 
 const ENDPOINT = "http://localhost:5000"
