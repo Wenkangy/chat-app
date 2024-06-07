@@ -48,7 +48,7 @@ app.use("/api/message", messageRoutes);
 
 const __dirname1 = path.resolve();
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
@@ -56,8 +56,7 @@ if (process.env.NODE_ENV === "development") {
   );
 } else {
   app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html");
-    res.send("api running");
+    res.send("API is runningwwwwwwwwwww..");
   });
 }
 
@@ -78,21 +77,21 @@ app.all("*", (req, res) => {
 });
 */
 
-const server = app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-const io = require('socket.io')(server,{
-  pingTimeout:60000,
-  cors:{
-    origin: "http://localhost:3000"
-  },
 
+const server = app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const io = require("socket.io")(server, {
+  pingTimeout: 60000,
+  cors: {
+    origin: "http://localhost:3000",
+    // credentials: true,
+  },
 });
 
 io.on("connection", (socket) => {
-  //console.log("connected to socket.io")
-  
-  socket.on("setup", (userData)=>{
+  console.log("Connected to socket.io");
+  socket.on("setup", (userData) => {
     socket.join(userData._id);
-    
     socket.emit("connected");
   });
 
@@ -100,14 +99,12 @@ io.on("connection", (socket) => {
     socket.join(room);
     console.log("User Joined Room: " + room);
   });
-
   socket.on("typing", (room) => socket.in(room).emit("typing"));
   socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
 
   socket.on("new message", (newMessageRecieved) => {
     var chat = newMessageRecieved.chat;
 
-    // broadcasts the received message to all users in the chat room, except the sender
     if (!chat.users) return console.log("chat.users not defined");
 
     chat.users.forEach((user) => {
@@ -121,13 +118,4 @@ io.on("connection", (socket) => {
     console.log("USER DISCONNECTED");
     socket.leave(userData._id);
   });
-
-
 });
-/*function verify_login(userName, pswd) {
-  if (userName == "kufooloo" && pswd == "secret") {
-    return true;
-  }
-  return false;
-}
-*/
