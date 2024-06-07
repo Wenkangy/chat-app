@@ -48,7 +48,7 @@ app.use("/api/message", messageRoutes);
 
 const __dirname1 = path.resolve();
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "development") {
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
@@ -56,7 +56,7 @@ if (process.env.NODE_ENV === "production") {
   );
 } else {
   app.get("/", (req, res) => {
-    res.send("API is runningwwwwwwwwwww..");
+    res.send("API is running..");
   });
 }
 
