@@ -12,7 +12,7 @@
     "mern",
     "chat-app"
   ],
-  "author": "wenkang and joanah",
+  "author": "wenkang and jonah",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
