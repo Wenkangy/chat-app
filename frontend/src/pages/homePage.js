@@ -39,7 +39,7 @@ const HomePage = () => {
         textAlign={"center"}
         
        >
-          <Text fontSize={"4xl"}fontFamily={"Work sands"} color={"black"}> Talk-Live</Text>
+          <Text fontSize={"4xl"}fontFamily={"Work sands"} color={"black"}> Chat</Text>
        </Box>
        <Box bg={"white"} p={4} w={"200%"} borderRadius={"lg"} borderWidth ={"1px"} textColor={"black"}>
         <Tabs variant={"soft-rounded"} colorScheme='gray'>
