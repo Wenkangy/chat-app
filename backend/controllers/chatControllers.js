@@ -169,4 +169,18 @@ const removeFromGroup = asyncHandler(async (req, res) => {
         }
 });
 
-module.exports = {accessChat , fetchChats, createGroupChat, renameGroup, addToGroup, removeFromGroup};
+const removeGroup = asyncHandler(async (req, res) => {
+    const {chatId} = req.body;
+    const removedChat = await Chat.findByIdAndDelete(chatId);
+
+        if(!removedChat){
+            res.status(404);
+            throw new Error("Chat not found");
+        }
+        else{
+            res.json(removedChat);
+            
+        }
+});
+
+module.exports = {accessChat , fetchChats, createGroupChat, renameGroup, addToGroup, removeFromGroup, removeGroup};
