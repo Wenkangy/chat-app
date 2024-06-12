@@ -77,7 +77,8 @@ Old repository https://github.com/Wenkangy/chat_app
 
 ### Add, Remove user or Delete chat room
 
-![image](https://github.com/Wenkangy/chat-app/assets/166893688/d8fed32e-53e3-49a9-a451-bfd9a761a1c4)
+![image](https://github.com/Wenkangy/chat-app/assets/166893688/cd9f2186-9a17-4a9c-895d-cf0f30628c1a)
+
 
 
 
