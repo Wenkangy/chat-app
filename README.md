@@ -42,7 +42,8 @@ npm start
 ## GitHub Repository
 - https://github.com/Wenkangy/chat-app
   
-**Note:** Old repository https://github.com/Wenkangy/chat_app
+**Note:** I had to change the repository of the app because render did not want to deploy my old repository due to the folders 
+Old repository https://github.com/Wenkangy/chat_app
   
 ## Deployment
 - https://chat-app-65qn.onrender.com
