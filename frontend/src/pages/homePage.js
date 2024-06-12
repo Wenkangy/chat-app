@@ -6,7 +6,7 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-  Text,
+ 
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useHistory  } from "react-router";
@@ -31,15 +31,14 @@ const HomePage = () => {
         display= "flex"
         justifyContent="center"
         p = {3}
-        bg ={"white"}
+        
         w = "200%"
         m="50px 0 15px 0"
-        borderRadius="lg"
-        borderWidth={"1px"}
+        
         textAlign={"center"}
         
        >
-          <Text fontSize={"4xl"}fontFamily={"Work sands"} color={"black"}> Chat</Text>
+          
        </Box>
        <Box bg={"white"} p={4} w={"200%"} borderRadius={"lg"} borderWidth ={"1px"} textColor={"black"}>
         <Tabs variant={"soft-rounded"} colorScheme='gray'>
