@@ -41,7 +41,8 @@ npm start
 ```
 ## GitHub Repository
 - https://github.com/Wenkangy/chat-app
-
+**Note:** Old repository https://github.com/Wenkangy/chat_app
+  
 ## Deployment
 - https://chat-app-65qn.onrender.com
 **Note:** Despite the application being successfully deployed, there is a known issue with the real-time chat functionality not working as expected. 
