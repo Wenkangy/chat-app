@@ -41,18 +41,20 @@ npm start
 ```
 ## GitHub Repository
 - https://github.com/Wenkangy/chat-app
+  
 **Note:** Old repository https://github.com/Wenkangy/chat_app
   
 ## Deployment
 - https://chat-app-65qn.onrender.com
+
 **Note:** Despite the application being successfully deployed, there is a known issue with the real-time chat functionality not working as expected. 
 
 ## Features
 
 ### Auntentication 
-## Login
+#### Login
 ![image](https://github.com/Wenkangy/chat-app/assets/166893688/89fea249-323f-45c1-9f70-f820f97f7a10)
-## Sign up
+#### Sign up
 ![image](https://github.com/Wenkangy/chat-app/assets/166893688/5881b88d-a6ae-459b-965f-bf038b3ba594)
 
 ### Create a new chat room with one or a group of existing users.
