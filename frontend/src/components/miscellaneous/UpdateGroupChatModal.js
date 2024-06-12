@@ -33,6 +33,47 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
   const [loading, setLoading] = useState(false);
   const [renameloading, setRenameloading] = useState(false);
   const toast = useToast();
+
+  const deletedChat = async (user1) => {
+    if (selectedChat.groupAdmin._id !== user._id && user1._id !== user._id) {
+      toast({
+        title: "Only admins can delete the chat!",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      return;
+    }
+    try {
+      setLoading(true);
+      const config = {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+        data: {
+          chatId: selectedChat._id,
+        }
+      };
+      const { data } = await axios.delete(`/api/chat/delete`, config);
+      setSelectedChat(data);
+      setFetchAgain(!fetchAgain);
+      fetchMessages();
+      setLoading(false);
+    } catch (error) {
+      toast({
+        title: "Error Occurred!",
+        description: error.response?.data?.message || "An unexpected error occurred",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      setLoading(false);
+    }
+    setGroupChatName("");
+  }
+
   const handleRemove =async (user1)=>{
     if (selectedChat.groupAdmin._id !== user._id && user1._id !== user._id) {
       toast({
@@ -268,8 +309,8 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
                   </ModalBody>
   
             <ModalFooter>
-              <Button onClick={() => handleRemove(user)} colorScheme="red">
-                Leave Close
+              <Button onClick={() => deletedChat(user)} colorScheme="red">
+                Delete Chat
               </Button>
              
             </ModalFooter>
