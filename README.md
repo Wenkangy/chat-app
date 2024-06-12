@@ -51,6 +51,9 @@ Old repository https://github.com/Wenkangy/chat_app
 **Note:** Despite the application being successfully deployed, there is a known issue with the real-time chat functionality not working as expected. 
 
 ## Features
+## User for testing 
+- guest@example.com  password: 123
+- jon@gmail.com  password: 123
 
 ### Auntentication 
 #### Login
