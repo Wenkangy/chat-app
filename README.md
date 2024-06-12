@@ -1,21 +1,67 @@
+# Instant Messaging Application
+---
+This project is an instant messaging application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides essential functionalities such as user authentication, creating chat rooms, messaging, displaying conversation history, and listing all chat rooms.
+## Project Structure and Implementation
+### Backend
+- Node.js: JavaScript runtime for server-side code execution.
+- Express.js: Framework for building the RESTful API.
+- MongoDB: NoSQL database for storing user and message data.
+- JWT (JSON Web Tokens): Used for user authentication and authorization.
+- bcryptjs: Library for hashing user passwords.
 
-///-----------------------------------------------------Notes------------------------------------------------///
+### Frontend
+- React.js: JavaScript library for building user interfaces.
+- Chakra ui: Building blocksn to help  build the frontend
+- axios: HTTP client for making API requests.
+- React Router: For handling routing within the the fontend and backend.
 
-This is the new repository for our Chat project. We faced some issues while deploying our application to render, where rendering did not allow deploying the first application inside a folder. The folder was api in the first repository
+## How to Run the Project
 
-OLD repository: https://github.com/Wenkangy/chat_app
+Clone the project:
+```sh
+https://github.com/Wenkangy/chat-app.git
+```
+Install dependencies for backend (only if the npm start does not work):
+```sh
+npm install
+```
+Install dependencies for frontend:
+```sh
+cd frontend
+npm install
+```
+Run the backend:
+```sh
+npm start
+```
+Run the frontend:
+```sh
+cd frontend
+npm start
+```
+## GitHub Repository
+- https://github.com/Wenkangy/chat-app
+
+## Deployment
+- https://chat-app-65qn.onrender.com
+
+### Notes
+
+## Features
+
+### Auntentication 
+
+### Create a new chat room with one or a group of existing users.
+
+### Chatting in the chat room
+
+### Display the  history conversations
+
+### Display all created chat rooms 
+
+### Add, Remove user or Delete chat room
 
 
-///-----------------------------------------------------Bugs------------------------------------------------///
-1. When login with an account the chat page will not load immediately you have to reload the page manually to render the chat rooms
-   ![image](https://github.com/Wenkangy/chat-app/assets/166893688/4b41a1b5-7b8b-4bb4-bac3-2527c63a7723)
 
-2. If you logout and login with a new account the The page will not show the username you logged in with, but the previous user. To fix this issue you need to refresh the page manually.
-
-
-
-
-///--------------------------------------------------- Chat APP ---------------------------------------------///
-
-
+   
 
